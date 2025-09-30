@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: nginx-pod
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,11 +14,12 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: nginx
+          image: busybox:unstable-uclibc
           resources:
             limits:
               memory: "128Mi"
               cpu: "500m"
           ports:
             - containerPort: 80
+
 
