@@ -14,12 +14,9 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: busybox:unstable-uclibc
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+          image: nginx:1-alpine-slim
           ports:
             - containerPort: 80
+
 
 
